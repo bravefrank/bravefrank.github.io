@@ -441,13 +441,13 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'https://api.eatrice.top/',
+          url: 'https://v1.hitokoto.cn',
           headers: {},
           dataType: 'json',
           success: function(result) {
             var apiText;
             if (result) {
-              var keys = '1'.split(',');
+              var keys = 'hitokoto,from'.split(',');
               if (result instanceof Array) {
                 result = result[0];
               }
@@ -465,7 +465,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://api.eatrice.top/:', error);
+              console.error('Failed to request https://v1.hitokoto.cn:', error);
             }
             typing(text);
           }
