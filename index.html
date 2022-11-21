@@ -517,9 +517,9 @@
       var text = subtitle.getAttribute('data-typed-text');
       
         jQuery.ajax({
-          type: 'GET',
-          url: 'https://api.1314.cool/words/api.php?return=json',
-          headers: {},
+          type: 'POST',
+          url: 'https://api.1314.cool/words/api.php',
+          headers: {"json":null},
           dataType: 'json',
           success: function(result) {
             var apiText;
@@ -542,7 +542,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://api.1314.cool/words/api.php?return=json:', error);
+              console.error('Failed to request https://api.1314.cool/words/api.php:', error);
             }
             typing(text);
           }
