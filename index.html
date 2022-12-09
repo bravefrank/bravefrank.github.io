@@ -189,7 +189,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="亲爱的老婆，爱你~MUA~"></span>
+            <span id="subtitle" data-typed-text=" 亲爱的老婆，爱你MUA&lt;i class=&#34;iconfont icon-love&#34;&gt;&lt;/i&gt;&lt;i class=&#34;iconfont icon-love&#34;&gt;&lt;/i&gt;&lt;i class=&#34;iconfont icon-love&#34;&gt;&lt;/i&gt;&lt;i class=&#34;iconfont icon-love&#34;&gt;&lt;/i&gt;~~~"></span>
           
         </div>
 
@@ -662,7 +662,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/11/21/%E7%8F%8D%E8%97%8F%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%87/" target="_self">
         <div>
-          祖国的山川秀美
+          一些生活照片
         </div>
       </a>
 
@@ -822,9 +822,9 @@
       var text = subtitle.getAttribute('data-typed-text');
       
         jQuery.ajax({
-          type: 'POST/GET',
+          type: 'GET',
           url: 'https://api.1314.cool/words/api.php?return=json',
-          headers: {"return":"json"},
+          headers: {},
           dataType: 'json',
           success: function(result) {
             var apiText;
