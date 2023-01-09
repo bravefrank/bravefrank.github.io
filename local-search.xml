@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>文件上传</title>
+    <link href="/2023/01/03/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    <url>/2023/01/03/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
+    
+    <content type="html"><![CDATA[<form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data" >　　　<input type="file" id="upload" name="upload" /> <br />　　　<input type="submit" value="Upload" /></form>]]></content>
+    
+    
+    <categories>
+      
+      <category>上传文件</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>一点点记忆</title>
     <link href="/2022/12/16/%E4%B8%80%E7%82%B9%E7%82%B9%E8%AE%B0%E5%BF%86/"/>
     <url>/2022/12/16/%E4%B8%80%E7%82%B9%E7%82%B9%E8%AE%B0%E5%BF%86/</url>
@@ -83,7 +108,7 @@
     <link href="/2022/11/24/%E5%BD%93%E6%97%A5%E6%96%B0%E9%97%BB/"/>
     <url>/2022/11/24/%E5%BD%93%E6%97%A5%E6%96%B0%E9%97%BB/</url>
     
-    <content type="html"><![CDATA[<!-- https://3g.163.com/touch/reconstruct/article/list/BBM54PGAwangning/0-10.html --> <h1 class="title1" ></h1> <h3 class="source1"></h2> <div  class="digest1"> <a href="link1"> </div></a> <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    <script>    $.getJSON('http://c.m.163.com/nc/article/headline/T1348649580692/0-40.html', function(data) {             for(int i = 0; i < 10 ; i++){                var link1   =  `${data.T1348649580692[i].url}`                if(link1 != ""){                    var title1 =   `${data.T1348649580692[i].title}`                    var source1 =  `${data.T1348649580692[i].source}`                    var digest1 =  `${data.T1348649580692[i].ltitle}`                    $(".title1").html(title1);                    $(".source1").html(source1);                    $(".digest1").html(digest1);                    $(".link1").html(link1);                }                eles{                    continue;                }            }    });    </script>]]></content>
+    <content type="html"><![CDATA[<!-- https://3g.163.com/touch/reconstruct/article/list/BBM54PGAwangning/0-10.html --> <h3 class="title1" ></h3> <h4 class="source1"></h4> <div  class="digest1"> <a href="link1"> </div></a> <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    <script>    $.getJSON('http://c.m.163.com/nc/article/headline/T1348649580692/0-40.html', function(data) {             var title1 =   `${data.T1348649580692[0].title}`            var source1 =  `${data.T1348649580692[0].source}`            var digest1 =  `${data.T1348649580692[0].ltitle}`            $(".title1").html(title1);            $(".source1").html(source1);            $(".digest1").html(digest1);            $(".link1").html(link1);    });    </script>]]></content>
     
     
     <categories>
