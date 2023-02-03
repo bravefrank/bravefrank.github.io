@@ -4,6 +4,81 @@
   
   
   <entry>
+    <title>超级马里奥</title>
+    <link href="/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/"/>
+    <url>/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/</url>
+    
+    <content type="html"><![CDATA[<!doctype html><html><head><title>HTML5超级玛丽</title><link rel="shortcut icon" href=favicon.png /><link rel=stylesheet type="text/css" href="/css/VNkyVaVxUV.css"><script type="text/javascript" src="/js/MARIO/jquery.js"></script></head><body><h4>方向键：移动  &nbsp;&nbsp;S键：跳跃/进入&nbsp;&nbsp;A键：快跑/射击</h4><div class=spacing></div><div class=main><canvas id=canvas width=640 height=480><p style="text-align: center;">糟糕！您的浏览器不支持HTML5 Canvas，玩不了，请尝试用Firefox、Chrome、IE9浏览器</p></canvas><div class=spacing></div></div><script src="/js/MARIO/wNGu2CtEMx.js"></script><script src="/js/MARIO/QAuIByrkL.js"></script><script>$(document).ready(function() { new Enjine.Application().Initialize(new Mario.LoadingState(), 320, 240) });</script><div style="text-align:center;clear:both"></div></body></html>]]></content>
+    
+    
+    <categories>
+      
+      <category>游戏</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>水果忍者</title>
+    <link href="/2023/02/03/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85/"/>
+    <url>/2023/02/03/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85/</url>
+    
+    <content type="html"><![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"> <meta name="Keywords" content="HTML5游戏,HTML5网页游戏,HTML5水果忍者,HTML5版水果忍者"><meta name="description" content="HTML5版水果忍者游戏"><meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="stylesheet" href="./images/index.css"><title>水果忍者</title><!--[if lt IE 9]><script>document.createElement("canvas");</script><![endif]--></head><body>    <div id="extra"></div>    <canvas id="view" width="640" height="480"></canvas>    <div id="desc">        <div>用鼠标滑动水果开始游戏</div>        <div id="browser"></div>    </div>    <script src="./scripts/all.js"></script></body></html>]]></content>
+    
+    
+    <categories>
+      
+      <category>游戏</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>中国象棋</title>
+    <link href="/2023/02/03/%E4%B8%AD%E5%9B%BD%E8%B1%A1%E6%A3%8B/"/>
+    <url>/2023/02/03/%E4%B8%AD%E5%9B%BD%E8%B1%A1%E6%A3%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="欢迎进入中国象棋"><a href="#欢迎进入中国象棋" class="headerlink" title="欢迎进入中国象棋"></a>欢迎进入中国象棋</h1><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>中国象棋游戏</title><link href="/css/zzsc.css" type="text/css" rel="stylesheet" /></head><body><div class="box" id="box">    <div class="chess_left">        <canvas id="chess">对不起，您的浏览器不支持HTML5，请升级浏览器至IE9、firefox或者谷歌浏览器！</canvas>        <audio src="audio/click.wav" id="clickAudio" preload="auto"></audio><!-- <audio src="audio/check.wav" id="checkAudio" preload="auto"></audio> -->        <audio src="audio/select.wav" id="selectAudio" preload="auto"></audio>        <div>            <div class="bn_box" id="bnBox">                <input type="button" name="offensivePlay" id="tyroPlay" value="新手水平" />                <input type="button" name="offensivePlay" id="superPlay" value="大师水平" /><!-- <input type="button" name="offensivePlay" id="offensivePlay" value="先手开始" />                <input type="button" name="defensivePlay" id="defensivePlay" value="后手开始" /> -->                <input type="button" name="regret" id="regretBn" value="悔棋" />                <input type="button" name="billBn" id="billBn" value="棋谱"  />                <input type="button" name="stypeBn" id="stypeBn" value="换肤" />            </div>        </div>    </div>    <div class="chess_right" id="chessRight">        <select name="billList" id="billList">        </select>        <ol id="billBox" class="bill_box">        </ol>    </div>    <div id="moveInfo" class="move_info"> </div></div><script src="/js/ZZSC/common.js" charset="UTF-8"></script> <script src="/js/ZZSC/play.js" charset="UTF-8"></script> <script src="/js/ZZSC/AI.js" charset="UTF-8"></script> <script src="/js/ZZSC/bill.js" charset="UTF-8"></script> <script src="/js/ZZSC/gambit.js" charset="UTF-8"></script><div style="text-align:center;clear:both"></div></body></html>]]></content>
+    
+    
+    <categories>
+      
+      <category>游戏</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Success Picture</title>
     <link href="/2023/01/11/Picture/"/>
     <url>/2023/01/11/Picture/</url>
@@ -183,7 +258,7 @@
     <link href="/2022/11/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%96%87/"/>
     <url>/2022/11/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%96%87/</url>
     
-    <content type="html"><![CDATA[ <h1 class="Title" ></h1> <h3 class="Author"></h2> <div  class="Content"></div> <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    <script>    $.getJSON('https://interface.meiriyiwen.com/article/random?dev=1', function(data) {        var Title =  `${data.data.title}`        var Author =  `${data.data.author}`        var Content =  `${data.data.content}`        $(".Title").html(Title);        $(".Author").html(Author);        $(".Content").html(Content);    });    </script>]]></content>
+    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a><h1 class="Title" ></h1></h1> <h3 class="Author"></h2> <div  class="Content"></div> <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    <script>    $.getJSON('https://interface.meiriyiwen.com/article/random?dev=1', function(data) {        var Title =  `${data.data.title}`        var Author =  `${data.data.author}`        var Content =  `${data.data.content}`        $(".Title").html(Title);        $(".Author").html(Author);        $(".Content").html(Content);    });    </script>]]></content>
     
     
     <categories>

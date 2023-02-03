@@ -47,6 +47,38 @@
 		  cover: '/img/avatar.png',
 		  lrc: '/songs/最伟大的作品.lrc',
 		  theme: '#46718b'
+		},
+		{
+		  name: '七里香',
+		  artist: '周杰伦',
+		  url: '/songs/七里香-周杰伦.mp3',
+		  cover: '/img/avatar.png',
+		  lrc: '/songs/七里香-周杰伦.lrc',
+		  theme: '#46718b'
+		},
+		{
+		  name: '突然的自我',
+		  artist: '伍佰',
+		  url: '/songs/突然的自我-伍佰.mp3',
+		  cover: '/img/avatar.png',
+		  lrc: '/songs/突然的自我-伍佰.lrc',
+		  theme: '#46718b'
+		},
+		{
+		  name: '挪威的森林',
+		  artist: '伍佰',
+		  url: '/songs/挪威的森林-伍佰.mp3',
+		  cover: '/img/avatar.png',
+		  lrc: '/songs/挪威的森林-伍佰.lrc',
+		  theme: '#46718b'
+		},
+		{
+		  name: '爱你一万年',
+		  artist: '伍佰',
+		  url: '/songs/爱你一万年-伍佰.mp3',
+		  cover: '/img/avatar.png',
+		  lrc: '/songs/爱你一万年-伍佰.lrc',
+		  theme: '#46718b'
 		}
       ]
     });
