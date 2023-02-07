@@ -33,7 +33,7 @@
     <link href="/2023/02/03/Bird/"/>
     <url>/2023/02/03/Bird/</url>
     
-    <content type="html"><![CDATA[<h1 id="奇奇怪怪的字母"><a href="#奇奇怪怪的字母" class="headerlink" title="奇奇怪怪的字母"></a>奇奇怪怪的字母</h1><!DOCTYPE html><html><head>  <meta charset="UTF-8">  <title>Flappy Bird</title>    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" /></head><body>  <div id="canvasContainer"></div>  <span id="textInputSpan">  Your name (max 8 chars) :  <input id="textInput" maxlength="10" type="text" width="150" />  <button onclick="changeText()">GO!</button></span><div style="text-align:center;clear:both"><script src="/gg_bd_ad_160x600_R.js" type="text/javascript"></script><script src="/follow.js" type="text/javascript"></script></div>  <script src="/js/Flappy/index.js"></script></body></html>]]></content>
+    <content type="html"><![CDATA[<h1 id="蠢蠢的小笨鸟"><a href="#蠢蠢的小笨鸟" class="headerlink" title="蠢蠢的小笨鸟"></a>蠢蠢的小笨鸟</h1><!DOCTYPE html><meta charset="UTF-8" /><title>flappy bird</title>    <style>        body {            margin: 0;            padding: 0;        }        canvas {            margin:0 auto;            width:460px;            position: relative;        }    </style><script src="/js/phaser.min.js"></script> <script src="/js/Flappy/main.js"></script>]]></content>
     
     
     <categories>
