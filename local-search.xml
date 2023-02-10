@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>文字聊天机器人</title>
+    <link href="/2023/02/09/%E6%96%87%E5%AD%97%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <url>/2023/02/09/%E6%96%87%E5%AD%97%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
+    
+    <content type="html"><![CDATA[ <div  class ="Content"></div> <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    <script>    var url = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=";    var input = "你好";    var fullurl = url + input;    $.getJSON(fullurl, function(data) {        var Content =  `${data.content}`         $(".Content").html(Content);    });    </script>]]></content>
+    
+    
+    <categories>
+      
+      <category>人工智能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>文字</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>超级马里奥</title>
     <link href="/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/"/>
     <url>/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/</url>

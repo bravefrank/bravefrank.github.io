@@ -18,26 +18,26 @@
   <meta name="author" content="BraveFrank">
   <meta name="keywords" content="">
   
-    <meta name="description" content="用若干个字母来代替bird，每触碰一个障碍，字母就会少一个">
+    <meta name="description" content="接口为青云客机器人">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flappy bird">
-<meta property="og:url" content="https://bravefrank.github.io/2023/02/03/Bird/index.html">
+<meta property="og:title" content="文字聊天机器人">
+<meta property="og:url" content="https://bravefrank.github.io/2023/02/09/%E6%96%87%E5%AD%97%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/index.html">
 <meta property="og:site_name" content="BraveFrank的奇妙之旅">
-<meta property="og:description" content="用若干个字母来代替bird，每触碰一个障碍，字母就会少一个">
+<meta property="og:description" content="接口为青云客机器人">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://bravefrank.github.io/img/Flappy%20bird.jpg">
-<meta property="article:published_time" content="2023-02-03T05:45:33.000Z">
-<meta property="article:modified_time" content="2023-02-07T09:18:58.000Z">
+<meta property="og:image" content="https://bravefrank.github.io/img/%E9%97%AE%E9%A2%98%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg">
+<meta property="article:published_time" content="2023-02-09T07:43:32.000Z">
+<meta property="article:modified_time" content="2023-02-10T01:53:44.000Z">
 <meta property="article:author" content="BraveFrank">
-<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="文字">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://bravefrank.github.io/img/Flappy%20bird.jpg">
+<meta name="twitter:image" content="https://bravefrank.github.io/img/%E9%97%AE%E9%A2%98%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Flappy bird - BraveFrank的奇妙之旅</title>
+  <title>文字聊天机器人 - BraveFrank的奇妙之旅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Flappy bird"></span>
+            <span id="subtitle" data-typed-text="文字聊天机器人"></span>
           
         </div>
 
@@ -218,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-03 13:45" pubdate>
-          2023年2月3日 下午
+        <time datetime="2023-02-09 15:43" pubdate>
+          2023年2月9日 下午
         </time>
       </span>
     
@@ -230,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          92 字
+          191 字
         
       </span>
     
@@ -241,7 +241,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -279,27 +279,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Flappy bird</h1>
+            <h1 style="display: none">文字聊天机器人</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="蠢蠢的小笨鸟"><a href="#蠢蠢的小笨鸟" class="headerlink" title="蠢蠢的小笨鸟"></a>蠢蠢的小笨鸟</h1><!DOCTYPE html><meta charset="UTF-8" />
-<title>flappy bird</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        canvas {
-            margin:0 auto;
-            width:460px;
-            position: relative;
-        }
-    </style>
-<script src="/js/phaser.min.js"></script> 
-<script src="/js/Flappy/main.js"></script>
-
+                 <div  class ="Content"></div>
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    var url = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=";
+    var input = "你好";
+    var fullurl = url + input;
+    $.getJSON(fullurl, function(data) {
+        var Content =  `${data.content}` 
+        $(".Content").html(Content);
+    });
+    </script>
                 
               </div>
             
@@ -317,7 +312,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="category-chain-item">人工智能</a>
   
   
 
@@ -332,7 +327,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
+        <a href="/tags/%E6%96%87%E5%AD%97/">#文字</a>
       
     </div>
   
@@ -344,8 +339,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Flappy bird</div>
-      <div>https://bravefrank.github.io/2023/02/03/Bird/</div>
+      <div>文字聊天机器人</div>
+      <div>https://bravefrank.github.io/2023/02/09/文字聊天机器人/</div>
     </div>
     <div class="license-meta">
       
@@ -357,7 +352,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月3日</div>
+          <div>2023年2月9日</div>
         </div>
       
       
@@ -389,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/" title="超级马里奥">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">超级马里奥</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/03/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85/" title="水果忍者">
-                        <span class="hidden-mobile">水果忍者</span>
+                      <a href="/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/" title="超级马里奥">
+                        <span class="hidden-mobile">超级马里奥</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
