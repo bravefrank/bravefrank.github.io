@@ -1,0 +1,184 @@
+/* 提高目录的z轴坐标，否则会被动态线挡住 */
+#toc
+{
+  z-index: 10;
+}
+
+/* 设置背景图片 */
+body {
+  background: url(../img/default.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#timeDate {
+  font-size: 12px;
+}
+#times {
+  font-size: 12px;
+}
+
+/* 以下为替换鼠标光标 */
+/* 封面大图 */
+.banner {
+  cursor: url(../img/Arrow.cur),auto;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 封面向下 */
+.scroll-down-bar {
+  cursor: url(../img/Hand.cur),auto;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 搜索框关闭按钮 */
+#local-search-close.close {
+  cursor: url(../img/Hand.cur),auto;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 搜索框、输入框 */
+input,textarea {
+  cursor: url(../img/IBeam.cur),auto;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 所有可跳转链接 */
+a[href] {
+  cursor: url(../img/Hand.cur),auto !important;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 按钮 */
+button[class] {
+  cursor: url(../img/Hand.cur),auto !important;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* 补充按钮 */
+svg,span.vat,span.vnick {
+  cursor: url(../img/Hand.cur),auto !important;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.aplayer-list-author,
+.aplayer-list-title,
+.aplayer-list-index,
+.aplayer-list-cur,
+.aplayer .aplayer-pic,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
+.aplayer-volume-bar-wrap,
+.aplayer-thumb,
+ol li ,
+apan[class] {
+  cursor: url(../img/Hand.cur),auto !important;
+  /* background-color: rgba(0, 0, 0, 0.0); */
+}
+
+.aplayer-music {
+  cursor: url(../img/Arrow.cur),auto !important;
+}
+
+/* 图片放大 */
+.fancybox-image {
+  cursor: url(../img/SizeAll.cur),auto;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+html {
+  cursor: url(../img/Arrow.cur),auto;
+  background-color: rgba(0, 0, 0, 0.0);
+  overflow-y: auto; /* 设置自定义滚动条 */
+}
+
+/* 滚动栏本身的背景 此项必须有 */
+html::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/*滚动栏下方的空白区域*/
+html::-webkit-scrollbar-track {
+  background-color: rgba(255, 85, 127, 0.0);
+}
+
+/* 可拖动滚动元素的大小取决于可滚动元素的大小 */
+html::-webkit-scrollbar-thumb{
+  background: #252d38;
+  border-radius: 6px;
+}
+
+/* 可滚动元素的底角，两个滚动条在此相交。 */
+html::-webkit-scrollbar-corner {
+  background:#82AFFF;
+}
+
+.markdown-body table {
+  overflow-x: scroll; /* 设置自定义滚动条 */
+}
+
+/* 滚动栏本身的背景 此项必须有 */
+.markdown-body table::-webkit-scrollbar {
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/*滚动栏下方的空白区域*/
+.markdown-body table::-webkit-scrollbar-track {
+  background-color: rgba(255, 85, 127, 0.0);
+}
+
+/* 可拖动滚动元素的大小取决于可滚动元素的大小 */
+.markdown-body table::-webkit-scrollbar-thumb{
+  background: #ffaaff;
+  border-radius: 2px;
+}
+
+.mytable {
+  width: auto !important;
+  margin:0 auto;
+  display: table !important;
+}
+
+.vempty {
+  color: #c4c6c8 !important;
+}
+
+/* 音乐插件 Aplayer相关 */
+.aplayer.aplayer-fixed .aplayer-body {
+  max-width: 324px !important;
+  max-height: 66px !important;
+}
+
+.aplayer.aplayer-withlrc .aplayer-pic {
+  height: 66px !important;
+  width: 66px !important;
+}
+
+.aplayer.aplayer-fixed {
+  max-width: 342px !important;
+}
+
+.aplayer-list-title,
+.aplayer-title {
+  color: #000;
+}
+
+.aplayer.aplayer-withlrc .aplayer-info {
+  margin-left: 66px !important;
+}
+
+.aplayer-lrc {
+  text-shadow: none !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  min-height: 17px;
+  font-size: 13px;
+}
+.aplayer .aplayer-lrc p {
+  font-size: 12px;
+  color: #d26fdc;
+  opacity: 0.5;
+  font-weight: bolder;
+}
