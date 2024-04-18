@@ -83,7 +83,7 @@
     <link href="/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/"/>
     <url>/2023/02/03/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5/</url>
     
-    <content type="html"><![CDATA[<h1 id="和马里奥一起冒险吧"><a href="#和马里奥一起冒险吧" class="headerlink" title="和马里奥一起冒险吧"></a>和马里奥一起冒险吧</h1><!doctype html><html><head><title>HTML5超级玛丽</title><link rel="shortcut icon" href=favicon.png /><link rel=stylesheet type="text/css" href="/css/VNkyVaVxUV.css"><script type="text/javascript" src="/js/MARIO/jquery.js"></script></head><body><h4>方向键：移动  &nbsp;&nbsp;S键：跳跃/进入&nbsp;&nbsp;A键：快跑/射击</h4><div class=spacing></div><div class=main><canvas id=canvas width=640 height=480><p style="text-align: center;">糟糕！您的浏览器不支持HTML5 Canvas，玩不了，请尝试用Firefox、Chrome、IE9浏览器</p></canvas><div class=spacing></div></div><script src="/js/MARIO/wNGu2CtEMx.js"></script><script src="/js/MARIO/QAuIByrkL.js"></script><script>$(document).ready(function() { new Enjine.Application().Initialize(new Mario.LoadingState(), 320, 240) });</script><div style="text-align:center;clear:both"></div></body></html>]]></content>
+    <content type="html"><![CDATA[<h1 id="和马里奥一起冒险吧"><a href="#和马里奥一起冒险吧" class="headerlink" title="和马里奥一起冒险吧"></a>和马里奥一起冒险吧</h1><head><title>HTML5超级玛丽</title><link rel="shortcut icon" href=favicon.png /><link rel=stylesheet type="text/css" href="/css/VNkyVaVxUV.css"><script type="text/javascript" src="/js/MARIO/jquery.js"></script></head><body><h4>方向键：移动  &nbsp;&nbsp;S键：跳跃/进入&nbsp;&nbsp;A键：快跑/射击</h4><div class=spacing></div><div class=main><canvas id=canvas width=800 height=600><p style="text-align: center;">糟糕！您的浏览器不支持HTML5 Canvas，玩不了，请尝试用Firefox、Chrome、IE9浏览器</p></canvas><div class=spacing></div></div><script src="/js/MARIO/wNGu2CtEMx.js"></script><script src="/js/MARIO/QAuIByrkL.js"></script><script>$(document).ready(function() { new Enjine.Application().Initialize(new Mario.LoadingState(), 320, 240) });</script><div style="text-align:center;clear:both"></div></body>]]></content>
     
     
     <categories>
@@ -108,7 +108,7 @@
     <link href="/2023/02/03/Bird/"/>
     <url>/2023/02/03/Bird/</url>
     
-    <content type="html"><![CDATA[<h1 id="蠢蠢的小笨鸟"><a href="#蠢蠢的小笨鸟" class="headerlink" title="蠢蠢的小笨鸟"></a>蠢蠢的小笨鸟</h1><!DOCTYPE html><meta charset="UTF-8" /><title>flappy bird</title>    <style>        body {            margin: 0;            padding: 0;        }        canvas {            margin:0 auto;            width:460px;            position: relative;        }    </style><script src="/js/phaser.min.js"></script> <script src="/js/Flappy/main.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="蠢蠢的小笨鸟"><a href="#蠢蠢的小笨鸟" class="headerlink" title="蠢蠢的小笨鸟"></a>蠢蠢的小笨鸟</h1><!DOCTYPE html><meta charset="UTF-8" /><title>flappy bird</title>    <style>        body {            margin: 0;            padding: 0;        }        canvas {            margin:0 auto;            width:460px;            position: relative;        }    </style><script src="/js/Flappy/phaser.min.js"></script> <script src="/js/Flappy/main.js"></script>]]></content>
     
     
     <categories>
@@ -358,7 +358,7 @@
     <link href="/2022/11/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%96%87/"/>
     <url>/2022/11/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%96%87/</url>
     
-    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a><h1 class="Title" ></h1></h1> <h3 class="Author"></h2> <div  class="Content"></div> <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    <script>    $.getJSON('https://interface.meiriyiwen.com/article/random?dev=1', function(data) {        var Title =  `${data.data.title}`        var Author =  `${data.data.author}`        var Content =  `${data.data.content}`        $(".Title").html(Title);        $(".Author").html(Author);        $(".Content").html(Content);    });    </script>]]></content>
+    <content type="html"><![CDATA[<h1 id="日报新闻"><a href="#日报新闻" class="headerlink" title="日报新闻"></a>日报新闻</h1><p><img src="https://dayu.qqsuu.cn/moyuribao/apis.php"></p><h1 id="娱乐吃瓜"><a href="#娱乐吃瓜" class="headerlink" title="娱乐吃瓜"></a>娱乐吃瓜</h1><p><img src="https://dayu.qqsuu.cn/mingxingbagua/apis.php"></p><h1 id="内涵段子"><a href="#内涵段子" class="headerlink" title="内涵段子"></a>内涵段子</h1><p><img src="https://dayu.qqsuu.cn/neihanduanzi/apis.php"></p><h1 id="新闻简报"><a href="#新闻简报" class="headerlink" title="新闻简报"></a>新闻简报</h1><p><img src="https://dayu.qqsuu.cn/weiyujianbao/apis.php"></p><h1 id="星座运势"><a href="#星座运势" class="headerlink" title="星座运势"></a>星座运势</h1><p><img src="https://dayu.qqsuu.cn/xingzuoyunshi/apis.php"></p>]]></content>
     
     
     <categories>

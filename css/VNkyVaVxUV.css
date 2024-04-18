@@ -130,7 +130,7 @@ input {
 }
 
 body {
-	background: #fff;
+	/*background: #fff;*/
 	line-height: 14px;
 	font-size: 12px;
 	font-family: Arial, Verdana, Helvetica, sans-serif;
@@ -166,7 +166,7 @@ a {
 body {
 	font-family: 'SilkscreenNormal', Arial, sans-serif;
 	padding-top: 10px;
-	background-color: #fafafa;
+	/*background-color: #fafafa;*/
 }
 
 h1,
@@ -206,7 +206,7 @@ a:hover {
 }
 
 canvas {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	border: 1px solid #aaa;
 	padding: 5px;
 }
@@ -217,12 +217,12 @@ canvas {
 }
 
 .main {
-	width: 640px;
+	width: 800px;
 	margin: auto;
 }
 
 .lbUser {
-	background-color: #eee;
+	/*background-color: #eee;*/
 	border: 1px solid #666;
 	margin-bottom: 5px;
 	padding: 10px;
@@ -238,6 +238,6 @@ canvas {
 }
 
 .activeUser {
-	background-color: #ccc;
+	/*background-color: #ccc;*/
 	border: 1px solid #666;
 }
