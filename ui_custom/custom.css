@@ -27,13 +27,13 @@ body {
 
 /* 封面向下 */
 .scroll-down-bar {
-  cursor: url(../img/Hand.cur),auto;
+  cursor: url(../img/hand.cur),auto;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* 搜索框关闭按钮 */
 #local-search-close.close {
-  cursor: url(../img/Hand.cur),auto;
+  cursor: url(../img/hand.cur),auto;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
@@ -45,19 +45,19 @@ input,textarea {
 
 /* 所有可跳转链接 */
 a[href] {
-  cursor: url(../img/Hand.cur),auto !important;
+  cursor: url(../img/hand.cur),auto !important;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* 按钮 */
 button[class] {
-  cursor: url(../img/Hand.cur),auto !important;
+  cursor: url(../img/hand.cur),auto !important;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* 补充按钮 */
 svg,span.vat,span.vnick {
-  cursor: url(../img/Hand.cur),auto !important;
+  cursor: url(../img/hand.cur),auto !important;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
@@ -71,7 +71,7 @@ svg,span.vat,span.vnick {
 .aplayer-thumb,
 ol li ,
 apan[class] {
-  cursor: url(../img/Hand.cur),auto !important;
+  cursor: url(../img/hand.cur),auto !important;
   /* background-color: rgba(0, 0, 0, 0.0); */
 }
 
