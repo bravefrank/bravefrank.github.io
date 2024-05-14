@@ -18,18 +18,18 @@
   <meta name="author" content="BraveFrank">
   <meta name="keywords" content="">
   
-    <meta name="description" content="分享猫猫狗狗图">
+    <meta name="description" content="分享狗狗图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="今日份阿猫阿狗">
+<meta property="og:title" content="今日份阿狗">
 <meta property="og:url" content="https://bravefrank.github.io/2022/11/21/%E4%BB%8A%E6%97%A5%E4%BB%BD%E9%98%BF%E7%8C%AB%E9%98%BF%E7%8B%97/index.html">
 <meta property="og:site_name" content="BraveFrank的奇妙之旅">
-<meta property="og:description" content="分享猫猫狗狗图">
+<meta property="og:description" content="分享狗狗图">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bravefrank.github.io/img/%E4%BB%8A%E6%97%A5%E4%BB%BD%E9%98%BF%E7%8C%AB%E9%98%BF%E7%8B%97.jpeg">
 <meta property="article:published_time" content="2022-11-21T05:40:44.000Z">
-<meta property="article:modified_time" content="2024-05-14T09:25:27.134Z">
+<meta property="article:modified_time" content="2024-05-14T09:41:47.810Z">
 <meta property="article:author" content="BraveFrank">
-<meta property="article:tag" content="阿猫">
+<meta property="article:tag" content="阿狗">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://bravefrank.github.io/img/%E4%BB%8A%E6%97%A5%E4%BB%BD%E9%98%BF%E7%8C%AB%E9%98%BF%E7%8B%97.jpeg">
   
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>今日份阿猫阿狗 - BraveFrank的奇妙之旅</title>
+  <title>今日份阿狗 - BraveFrank的奇妙之旅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -242,7 +242,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="今日份阿猫阿狗"></span>
+            <span id="subtitle" data-typed-text="今日份阿狗"></span>
           
         </div>
 
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          296 字
+          624 字
         
       </span>
     
@@ -281,7 +281,7 @@
         
         
         
-          3 分钟
+          6 分钟
         
       </span>
     
@@ -319,32 +319,44 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">今日份阿猫阿狗</h1>
+            <h1 style="display: none">今日份阿狗</h1>
             
             
               <div class="markdown-body">
                 
                   <body>
-    <div id="dogs-container"></div>
-      <script>
-        fetch('https://dog.ceo/api/breeds/image/random/10')
-          .then(response => response.json())
-          .then(data => {
-            const images = data.message;
-            let imageElements = '';
-            images.forEach(url => {
-              imageElements += `<img src="${url}" srcset="/img/loading.gif" lazyload alt="Dog image">`;
-            });
-             document.getElementById('dogs-container').innerHTML = imageElements;
-          })
-          .catch(error => console.error('Error:', error));
-      </script>
+    <img id="dog1" />
+    <img id="dog2" />
+    <img id="dog3" />
+    <img id="dog4" />
+    <img id="dog5" />
+    <img id="dog6" />
+    <img id="dog7" />
+    <img id="dog8" />
+    <img id="dog9" />
+    <img id="dog10" />
   <!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script>
   <div id="aplayer"></div>
   <link defer rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
   <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
   <script defer src="/js/aplayer.js"></script>
 <!-- hexo injector body_end end --></body>
+  <script>
+    fetch("https://dog.ceo/api/breeds/image/random/10")
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("dog1").src = data.message[0];
+        document.getElementById("dog2").src = data.message[1];
+        document.getElementById("dog3").src = data.message[2];
+        document.getElementById("dog4").src = data.message[3];
+        document.getElementById("dog5").src = data.message[4];
+        document.getElementById("dog6").src = data.message[5];
+        document.getElementById("dog7").src = data.message[6];
+        document.getElementById("dog8").src = data.message[7];
+        document.getElementById("dog9").src = data.message[8];
+        document.getElementById("dog10").src = data.message[9];
+      });
+  </script>
                 
               </div>
             
@@ -377,7 +389,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%98%BF%E7%8C%AB/">#阿猫</a>
+        <a href="/tags/%E9%98%BF%E7%8B%97/">#阿狗</a>
       
     </div>
   
@@ -389,7 +401,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>今日份阿猫阿狗</div>
+      <div>今日份阿狗</div>
       <div>https://bravefrank.github.io/2022/11/21/今日份阿猫阿狗/</div>
     </div>
     <div class="license-meta">
