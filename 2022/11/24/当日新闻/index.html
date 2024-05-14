@@ -18,16 +18,16 @@
   <meta name="author" content="BraveFrank">
   <meta name="keywords" content="">
   
-    <meta name="description" content="来自网易新闻">
+    <meta name="description" content="来自NewsAPI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="当日新闻">
 <meta property="og:url" content="https://bravefrank.github.io/2022/11/24/%E5%BD%93%E6%97%A5%E6%96%B0%E9%97%BB/index.html">
 <meta property="og:site_name" content="BraveFrank的奇妙之旅">
-<meta property="og:description" content="来自网易新闻">
+<meta property="og:description" content="来自NewsAPI">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bravefrank.github.io/img/%E5%BD%93%E6%97%A5%E6%96%B0%E9%97%BB.jfif">
 <meta property="article:published_time" content="2022-11-24T06:08:55.000Z">
-<meta property="article:modified_time" content="2023-01-04T05:21:46.000Z">
+<meta property="article:modified_time" content="2024-05-14T07:04:49.253Z">
 <meta property="article:author" content="BraveFrank">
 <meta property="article:tag" content="热点">
 <meta name="twitter:card" content="summary_large_image">
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          333 字
+          1k 字
         
       </span>
     
@@ -281,7 +281,7 @@
         
         
         
-          3 分钟
+          9 分钟
         
       </span>
     
@@ -324,25 +324,66 @@
             
               <div class="markdown-body">
                 
-                <!-- https://3g.163.com/touch/reconstruct/article/list/BBM54PGAwangning/0-10.html -->
-
- <h3 class="title1" ></h3>
- <h4 class="source1"></h4>
- <div  class="digest1">
- <a href="link1"> </div></a>
- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                <body>
+    <h1>新闻头条</h1>
+    <div id="news-container"></div>
+    <div id="news-container_US"></div>
     <script>
-    $.getJSON('http://c.m.163.com/nc/article/headline/T1348649580692/0-40.html', function(data) { 
-            var title1 =   `${data.T1348649580692[0].title}`
-            var source1 =  `${data.T1348649580692[0].source}`
-            var digest1 =  `${data.T1348649580692[0].ltitle}`
-            $(".title1").html(title1);
-            $(".source1").html(source1);
-            $(".digest1").html(digest1);
-            $(".link1").html(link1);
-    });
+        // API URL 和 Key
+        const url = 'https://newsapi.org/v2/top-headlines?country=cn&apiKey=4aeb85820fed42a698cf7c482c0139be';
+        // 使用fetch API获取新闻
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const articles = data.articles;
+                let newsHtml = '';
+                let fullHtml = '';
+                // 遍历新闻文章数组，构建HTML字符串
+                articles.slice(0, 15).forEach(article => {
+                    newsHtml += `
+                       <li>
+                            <a href="${article.url}" target="_blank">
+                                ${article.title} 
+                            </a>
+                        </li>
+                    `;
+                });
+                fullHtml = "<div><h2>"+"国内新闻"+"</h2></div><div><ol><h3>"+newsHtml+"</h3></ol></div>"
+                // 将构建的HTML字符串设置到页面中
+                document.getElementById('news-container').innerHTML = fullHtml;
+            })
+            .catch(error => console.error('获取新闻时发生错误:', error));
+        // API URL 和 Key
+        const url_us = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=4aeb85820fed42a698cf7c482c0139be';
+        // 使用fetch API获取新闻
+        fetch(url_us)
+            .then(response => response.json())
+            .then(data => {
+                const articles = data.articles;
+                let newsHtml_us = '';
+                let fullHtml_us = '';
+                // 遍历新闻文章数组，构建HTML字符串
+                articles.slice(0, 15).forEach(article => {
+                    newsHtml_us += `
+                       <li>
+                            <a href="${article.url}" target="_blank">
+                                ${article.title} 
+                            </a>
+                        </li>
+                    `;
+                });
+                fullHtml_us = "<div><h2>"+"国外新闻"+"</h2></div><div><ol><h3>"+newsHtml_us+"</h3></ol></div>"
+                // 将构建的HTML字符串设置到页面中
+                document.getElementById('news-container_US').innerHTML = fullHtml_us;
+            })
+            .catch(error => console.error('获取新闻时发生错误:', error));
     </script>
-
+<!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script>
+  <div id="aplayer"></div>
+  <link defer rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+  <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+  <script defer src="/js/aplayer.js"></script>
+<!-- hexo injector body_end end --></body>
                 
               </div>
             
@@ -743,10 +784,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script>
-  <div id="aplayer"></div>
-  <link defer rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
-  <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
-  <script defer src="/js/aplayer.js"></script>
-<!-- hexo injector body_end end --></body>
+</body>
 </html>
