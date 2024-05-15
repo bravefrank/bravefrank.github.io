@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bravefrank.github.io/img/%E4%BB%8A%E6%97%A5%E4%BB%BD%E9%98%BF%E7%8C%AB%E9%98%BF%E7%8B%97.jpeg">
 <meta property="article:published_time" content="2022-11-21T05:40:44.000Z">
-<meta property="article:modified_time" content="2024-05-15T01:02:31.694Z">
+<meta property="article:modified_time" content="2024-05-15T03:17:37.361Z">
 <meta property="article:author" content="BraveFrank">
 <meta property="article:tag" content="阿狗">
 <meta name="twitter:card" content="summary_large_image">
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          624 字
+          431 字
         
       </span>
     
@@ -281,7 +281,7 @@
         
         
         
-          6 分钟
+          4 分钟
         
       </span>
     
@@ -324,17 +324,53 @@
             
               <div class="markdown-body">
                 
-                  <body>
-    <div><img id="dog1" /></div>
-    <div><img id="dog2" /></div>
-    <div><img id="dog3" /></div>
-    <div><img id="dog4" /></div>
-    <div><img id="dog5" /></div>
-    <div><img id="dog6" /></div>
-    <div><img id="dog7" /></div>
-    <div><img id="dog8" /></div>
-    <div><img id="dog9" /></div>
-    <div><img id="dog10" /></div>
+                <h2 id="滚动播放随机修勾图片"><a href="#滚动播放随机修勾图片" class="headerlink" title="滚动播放随机修勾图片"></a>滚动播放随机修勾图片</h2>  <body>
+    <style type="text/css">
+        .one{
+            width: 100%;
+            height: 300px;
+        }
+        .wai{
+            width: 2650px;
+            height: 300px;
+            border-top: 10px solid #000;
+            border-bottom: 10px solid #000;
+        }
+        .dian{
+            width:  2650px;
+            height: 280px;
+            border-top: 10px dashed #000;
+            border-bottom: 10px dashed #000;
+        }
+        .nei{
+            display: inline-block;
+            width: 260px;
+            height: 260px;
+            border: 5px solid #000;
+        }
+        .nei img{
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+    <div class="one">
+        <marquee direction="left" scrollamount="15" scrolldelay="200" onmouseover="stop();" onmouseout="start();">
+            <div class="wai">
+                <div class="dian">
+                    <div class="nei"><img id="dog1" alt=""></div>
+                    <div class="nei"><img id="dog2" alt=""></div>
+                    <div class="nei"><img id="dog3" alt=""></div>
+                    <div class="nei"><img id="dog4" alt=""></div>
+                    <div class="nei"><img id="dog5" alt=""></div>
+                    <div class="nei"><img id="dog6" alt=""></div>
+                    <div class="nei"><img id="dog7" alt=""></div>
+                    <div class="nei"><img id="dog8" alt=""></div>
+                    <div class="nei"><img id="dog9" alt=""></div>
+                    <div class="nei"><img id="dog10" alt=""></div>
+                </div>
+            </div>
+        </marquee>
+    </div>
   <!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script>
   <div id="aplayer"></div>
   <link defer rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
@@ -345,16 +381,9 @@
     fetch("https://dog.ceo/api/breeds/image/random/10")
       .then((response) => response.json())
       .then((data) => {
-        document.getElementById("dog1").src = data.message[0];
-        document.getElementById("dog2").src = data.message[1];
-        document.getElementById("dog3").src = data.message[2];
-        document.getElementById("dog4").src = data.message[3];
-        document.getElementById("dog5").src = data.message[4];
-        document.getElementById("dog6").src = data.message[5];
-        document.getElementById("dog7").src = data.message[6];
-        document.getElementById("dog8").src = data.message[7];
-        document.getElementById("dog9").src = data.message[8];
-        document.getElementById("dog10").src = data.message[9];
+        for (let i = 1; i <= 10; i++) {
+          document.getElementById("dog" + i).src = data.message[i - 1];
+        }
       });
   </script>
                 
