@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bravefrank.github.io/img/%E9%97%AE%E9%A2%98%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg">
 <meta property="article:published_time" content="2023-02-09T07:43:32.000Z">
-<meta property="article:modified_time" content="2024-04-26T03:26:47.527Z">
+<meta property="article:modified_time" content="2024-05-15T08:40:26.033Z">
 <meta property="article:author" content="BraveFrank">
 <meta property="article:tag" content="人工智能">
 <meta name="twitter:card" content="summary_large_image">
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.6k 字
+          3.5k 字
         
       </span>
     
@@ -329,7 +329,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <style>
     *{
@@ -515,53 +514,47 @@
         </div>
     </div>
     <script type="text/javascript">
-        // 成功发送
-        var send_message=document.getElementById("chat_middle_item");
-        var domBtm=document.getElementById("button");
-        // 发送内容
-        var message=document.getElementById("chat_context_item");
+        let send_message=document.getElementById("chat_middle_item");
+        let domBtm=document.getElementById("button");
+        let message=document.getElementById("chat_context_item");
         domBtm.addEventListener("click",function(){
-            var str_send=message.value;
-            var str_reply=message.value;
-            var url = "https://api.qingyunke.com/api.php?key=free&appid=0&msg=";
-            var cross = "?callback=?"
-            var fullUrl= url+str_reply+cross;
-            var reply = "";
-            var date=new Date();
-            var hour=date.getHours();
-            var mm=date.getMinutes();
-            var time=hour+':'+mm;
-            var ans=
+            let str_send=message.value;
+            let str_reply=message.value;
+            let reply = "";
+            let date=new Date();
+            let hour=date.getHours();
+            let mm=date.getMinutes();
+            let time=hour+':'+mm;
+            let ans=
                 '<div class="chat_right_item_1 clearfix">匿名</div>'+
                 '<div class="chat_right_item_2">'+
                     '<div class="chat_right_time clearfix">'+time+'</div>'+
                     '<div class="chat_right_content clearfix">'+str_send+'</div>'+
-                '</div>'
-            var oLi=document.createElement("div");
+                '</div>';
+            let oLi=document.createElement("div");
             oLi.setAttribute("class","chat_right");
             oLi.innerHTML=ans;
             send_message.append(oLi);
             message.value="";
-            // $.getJSON(fullUrl, function(data) {
             $.ajax({
-                url: fullUrl,
-                dataType: "json",
                 type: "GET",
-                async: false,
+                url: "https://api.qingyunke.com/api.php?key=free&appid=0&msg="+str_reply,
+                dataType: "jsonp",
+                jsonp:"callback",
+                jsonpCallback:"f",
                 success: function(data) {
                     reply = data.content;
                     date=new Date();
                     hour=date.getHours();
                     mm=date.getMinutes();
                     time=hour+':'+mm;
-                    var ask=
+                    let ask=
                     '<div class="chat_left_item_1 clearfix">小坤</div>'+
                     '<div class="chat_left_item_2">'+
                         '<div class="chat_left_time clearfix">'+time+'</div>'+
                         '<div class="chat_left_content clearfix">'+reply+'</div>'+
                     '</div>';
-                    //回复
-                    var oLi2=document.createElement("div");
+                    let oLi2=document.createElement("div");
                     oLi2.setAttribute("class","chat_left");
                     oLi2.innerHTML=ask;
                     send_message.append(oLi2);
@@ -572,14 +565,13 @@
                     hour=date.getHours();
                     mm=date.getMinutes();
                     time=hour+':'+mm;
-                    var ask=
+                    let ask=
                     '<div class="chat_left_item_1 clearfix">小坤</div>'+
                     '<div class="chat_left_item_2">'+
                         '<div class="chat_left_time clearfix">'+time+'</div>'+
                         '<div class="chat_left_content clearfix">'+reply+'</div>'+
                     '</div>';
-                    //回复
-                    var oLi2=document.createElement("div");
+                    let oLi2=document.createElement("div");
                     oLi2.setAttribute("class","chat_left");
                     oLi2.innerHTML=ask;
                     send_message.append(oLi2);
