@@ -6,8 +6,7 @@
 
 /* 设置背景图片 */
 body {
-  background: url(../img/default.png);
-  background-attachment: fixed;
+  background: url(../img/IMG_5384.JPG) fixed;
   background-size: cover;
 }
 
