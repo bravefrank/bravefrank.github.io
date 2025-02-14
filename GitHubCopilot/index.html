@@ -1,0 +1,881 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head><!-- hexo injector head_begin start --><link href="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/css/index.css" rel="stylesheet"/><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="BraveFrank">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Github copilot 主要功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub Copilot">
+<meta property="og:url" content="https://bravefrank.github.io/GitHubCopilot/index.html">
+<meta property="og:site_name" content="BraveFrank的奇妙之旅">
+<meta property="og:description" content="Github copilot 主要功能">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bravefrank.github.io/img/GitHubCopilot.png">
+<meta property="article:published_time" content="2025-02-14T05:45:33.000Z">
+<meta property="article:modified_time" content="2025-02-14T06:47:44.149Z">
+<meta property="article:author" content="BraveFrank">
+<meta property="article:tag" content="Github Copolit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bravefrank.github.io/img/GitHubCopilot.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>GitHub Copilot - BraveFrank的奇妙之旅</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/ui_custom/custom.css">
+<link rel="stylesheet" href="/ui_custom/macpanel.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"bravefrank.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 30vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <!--      <strong>BraveFrank&#39;s Blog</strong>-->
+            <strong class="navbar-title">BraveFrank&#39;s Blog</strong>
+        </a>
+        <span class="my-span">
+            <div id="ww_30f66888ec796" v='1.3' loc='auto'
+                 a='{"t":"ticker","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+                <a href="https://weatherwidget.org/zh/" id="ww_30f66888ec796_u" target="_blank">天气插件</a>
+            </div>
+            <script async src="https://app2.weatherwidget.org/js/?id=ww_30f66888ec796"></script>
+            <style>
+                .my-span {
+                  width: 150px; /* 设置行高为30像素 */
+                  /*border: 2px solid #0287cf;*/
+                  border-radius: 10px; /* 设置圆角边框*/
+                  /*background-color: #0287cf;*/
+                }
+            </style>
+        </span>
+        <!--        已停止维护-->
+        <!--        <script>-->
+        <!--          WIDGET = {-->
+        <!--            "CONFIG": {-->
+        <!--              "modules": "10243",-->
+        <!--              "background": "5",-->
+        <!--              "tmpColor": "FFFFFF",-->
+        <!--              "tmpSize": "16",-->
+        <!--              "cityColor": "FFFFFF",-->
+        <!--              "citySize": "16",-->
+        <!--              "aqiColor": "FFFFFF",-->
+        <!--              "aqiSize": "16",-->
+        <!--              "weatherIconSize": "24",-->
+        <!--              "alertIconSize": "18",-->
+        <!--              "padding": "10px 10px 10px 10px",-->
+        <!--              "shadow": "0",-->
+        <!--              "language": "auto",-->
+        <!--              "borderRadius": "10",-->
+        <!--              "fixed": "false",-->
+        <!--              "vertical": "top",-->
+        <!--              "horizontal": "left",-->
+        <!--              "key": "dc351a53f37949b9b777e9a6c1b96457"-->
+        <!--            }-->
+        <!--          }-->
+        <!--        </script>-->
+        <!--        <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>-->
+
+        <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon"><span></span><span></span><span></span></div>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-center">
+                
+                    
+                    
+                    
+                    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="iconfont icon-home-fill"></i>
+                                文章
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                    
+                                    
+                                    
+                                    <a class="dropdown-item" href="/archives/">
+                                        <i class="iconfont icon-archive-fill"></i>
+                                        归档
+                                    </a>
+                                
+                                    
+                                    
+                                    
+                                    <a class="dropdown-item" href="/categories/">
+                                        <i class="iconfont icon-category-fill"></i>
+                                        分类
+                                    </a>
+                                
+                                    
+                                    
+                                    
+                                    <a class="dropdown-item" href="/tags/">
+                                        <i class="iconfont icon-tags-fill"></i>
+                                        标签
+                                    </a>
+                                
+                            </div>
+                        </li>
+                    
+                
+                    
+                    
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">
+                                <i class="iconfont icon-user-fill"></i>
+                                关于
+                            </a>
+                        </li>
+                    
+                
+                
+                    <li class="nav-item" id="search-btn">
+                        <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal"
+                           data-target="#modalSearch" aria-label="Search">
+                            &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+                        </a>
+                    </li>
+                    
+                
+                
+                    <li class="nav-item" id="color-toggle-btn">
+                        <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                                    class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/VanGoghStarryNight.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h1">
+          
+            <span id="subtitle" data-typed-text="GitHub Copilot"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        BraveFrank
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-14 13:45" pubdate>
+          2025年2月14日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">GitHub Copilot</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>GitHub Copilot 企业版（GitHub Copilot for Enterprise）是专为大型企业和团队设计的AI编程助手，结合了GitHub的代码库优势与OpenAI的先进模型（如GPT-4），旨在提升开发效率、代码质量与团队协作。以下是其核心功能的详细说明：</p>
+<hr>
+<h3 id="1-企业级代码生成与补全"><a href="#1-企业级代码生成与补全" class="headerlink" title="1. 企业级代码生成与补全"></a><strong>1. 企业级代码生成与补全</strong></h3><ul>
+<li><strong>智能上下文感知</strong>：<ul>
+<li>基于当前代码文件和项目上下文，实时生成代码建议（单行、多行或完整函数）。</li>
+<li>支持超过 <strong>50种编程语言</strong>（如Python、JavaScript、Java、Go、C++等）和主流框架（如React、Django、TensorFlow）。</li>
+</ul>
+</li>
+<li><strong>自然语言转代码</strong>：<ul>
+<li>开发者可通过注释或自然语言描述（如“实现一个用户登录的API”），自动生成符合需求的代码片段。</li>
+<li>支持生成单元测试代码、API请求模板、数据模型等。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="2-代码质量与安全增强"><a href="#2-代码质量与安全增强" class="headerlink" title="2. 代码质量与安全增强"></a><strong>2. 代码质量与安全增强</strong></h3><ul>
+<li><strong>代码审查辅助</strong>：<ul>
+<li>在Pull Request中自动识别潜在问题（如代码冗余、逻辑错误），并给出优化建议。</li>
+<li>标记不符合团队编码规范的代码（如未遵循PEP8、ESLint规则）。</li>
+</ul>
+</li>
+<li><strong>安全漏洞检测</strong>：<ul>
+<li>集成GitHub Advanced Security，实时扫描代码中的安全风险（如SQL注入、硬编码密钥、依赖漏洞）。</li>
+<li>提供修复建议，并与企业安全策略联动（如自动阻断高风险代码合并）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-团队协作与知识共享"><a href="#3-团队协作与知识共享" class="headerlink" title="3. 团队协作与知识共享"></a><strong>3. 团队协作与知识共享</strong></h3><ul>
+<li><strong>企业知识库集成</strong>：<ul>
+<li>基于企业内部私有代码库和文档训练定制化模型，生成符合业务逻辑的代码。</li>
+<li>支持共享团队常用代码片段、工具类函数，减少重复开发。</li>
+</ul>
+</li>
+<li><strong>统一编码规范</strong>：<ul>
+<li>通过企业级配置强制代码风格（缩进、命名规范等），确保团队代码一致性。</li>
+<li>自动生成符合规范的文档（如Swagger API文档、TypeScript类型定义）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-企业级隐私与合规"><a href="#4-企业级隐私与合规" class="headerlink" title="4. 企业级隐私与合规"></a><strong>4. 企业级隐私与合规</strong></h3><ul>
+<li><strong>数据隔离与隐私保护</strong>：<ul>
+<li>企业代码和数据<strong>不用于训练公开模型</strong>，确保知识产权不外泄。</li>
+<li>支持私有化部署（需联系GitHub定制方案），代码处理完全在可控环境中进行。</li>
+</ul>
+</li>
+<li><strong>合规性支持</strong>：<ul>
+<li>符合GDPR、SOC 2、ISO 27001等企业级安全标准。</li>
+<li>提供审计日志和权限管控（如限制敏感代码库的Copilot访问权限）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="5-开发效率工具集成"><a href="#5-开发效率工具集成" class="headerlink" title="5. 开发效率工具集成"></a><strong>5. 开发效率工具集成</strong></h3><ul>
+<li><strong>IDE深度支持</strong>：<ul>
+<li>原生集成VS Code、JetBrains全家桶（IntelliJ、PyCharm等）、Visual Studio等主流IDE。</li>
+<li>支持在代码编辑器中直接调用Copilot生成文档、测试用例或修复建议。</li>
+</ul>
+</li>
+<li><strong>CI&#x2F;CD流水线整合</strong>：<ul>
+<li>与GitHub Actions、Jenkins等工具联动，在自动化流程中嵌入代码审查和优化建议。</li>
+<li>生成代码覆盖率报告和性能分析建议。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="6-企业级管理与分析"><a href="#6-企业级管理与分析" class="headerlink" title="6. 企业级管理与分析"></a><strong>6. 企业级管理与分析</strong></h3><ul>
+<li><strong>集中管控与权限管理</strong>：<ul>
+<li>通过GitHub Enterprise Cloud控制台统一管理Copilot许可证、访问权限和使用策略。</li>
+<li>支持SSO（单点登录）和SCIM（用户自动同步）。</li>
+</ul>
+</li>
+<li><strong>开发效能分析</strong>：<ul>
+<li>提供团队级数据看板，统计代码生成效率、问题修复速度、安全漏洞减少率等指标。</li>
+<li>生成可定制化报告，帮助技术管理者优化资源分配。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="7-专属支持与服务"><a href="#7-专属支持与服务" class="headerlink" title="7. 专属支持与服务"></a><strong>7. 专属支持与服务</strong></h3><ul>
+<li><strong>优先技术支持</strong>：<ul>
+<li>24&#x2F;7企业级SLA（服务级别协议），保证高优先级问题快速响应。</li>
+<li>专属客户成功经理（CSM）提供定制化培训与最佳实践指导。</li>
+</ul>
+</li>
+<li><strong>定制化模型训练</strong>（需额外协商）：<ul>
+<li>基于企业私有代码库微调Copilot模型，提升特定领域（如金融、医疗）的代码生成准确性。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="定价与部署"><a href="#定价与部署" class="headerlink" title="定价与部署"></a><strong>定价与部署</strong></h3><ul>
+<li><strong>订阅模式</strong>：<ul>
+<li>按企业用户数或开发者席位收费，具体价格需联系GitHub销售团队。</li>
+<li>包含在GitHub Enterprise Cloud套餐中，或作为独立服务购买。</li>
+</ul>
+</li>
+<li><strong>部署灵活性</strong>：<ul>
+<li>支持云端（GitHub托管）或本地化部署（需企业自备基础设施）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="与其他版本的区别"><a href="#与其他版本的区别" class="headerlink" title="与其他版本的区别"></a><strong>与其他版本的区别</strong></h3><table>
+<thead>
+<tr>
+<th><strong>功能</strong></th>
+<th><strong>个人版</strong></th>
+<th><strong>团队版</strong></th>
+<th><strong>企业版</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代码隐私保护</td>
+<td>基础</td>
+<td>基础</td>
+<td><strong>完全隔离+私有化</strong></td>
+</tr>
+<tr>
+<td>定制化模型训练</td>
+<td>❌</td>
+<td>❌</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>企业级安全合规</td>
+<td>❌</td>
+<td>部分</td>
+<td>✔️（GDPR&#x2F;SOC 2等）</td>
+</tr>
+<tr>
+<td>集中管理与分析工具</td>
+<td>❌</td>
+<td>基础</td>
+<td>✔️（高级报表+权限管控）</td>
+</tr>
+<tr>
+<td>专属支持</td>
+<td>社区支持</td>
+<td>标准支持</td>
+<td><strong>24&#x2F;7优先支持+SLA</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a><strong>适用场景</strong></h3><ol>
+<li><strong>快速原型开发</strong>：通过自然语言生成业务逻辑代码，缩短MVP开发周期。</li>
+<li><strong>遗留代码维护</strong>：自动生成文档、重构建议，降低技术债务。</li>
+<li><strong>跨团队协作</strong>：统一编码规范，减少代码审查冲突。</li>
+<li><strong>安全敏感行业</strong>：金融、医疗等领域需严格合规的代码生成与审查。</li>
+</ol>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>GitHub Copilot 企业版通过深度整合企业代码资产与AI能力，不仅提升开发者效率，更在代码质量、安全合规和团队协作上提供全方位支持，适合中大型企业构建标准化、安全可控的开发流程。如需进一步技术细节或演示，可联系GitHub官方团队获取定制化方案。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI/" class="category-chain-item">AI</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Github-Copolit/">#Github Copolit</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>GitHub Copilot</div>
+      <div>https://bravefrank.github.io/GitHubCopilot/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>BraveFrank</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月14日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/NewMomBlues/" title="新手妈妈情绪蓝皮书">
+                        <span class="hidden-mobile">新手妈妈情绪蓝皮书</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span id="jinrishici-sentence" style="color: black;">正在加载今日诗词....</span> <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span style="color: black;">Frank</span></a> <i style="color: black;" class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span style="color: black;">SuShi</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/ui_custom/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script>
+  <div id="aplayer"></div>
+  <link defer rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+  <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+  <script defer src="/js/aplayer.js"></script>
+<!-- hexo injector body_end end --></body>
+</html>
